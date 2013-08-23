@@ -18,7 +18,7 @@ class TwiglyController extends AbstractActionController
 
      public function twiglyAction()
     {   
-        
+        echo "go...";
 // return array('version'=> \Zend\Version\Version::VERSION);
 
         return new ViewModel(array(
