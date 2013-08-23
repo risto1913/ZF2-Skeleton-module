@@ -16,9 +16,9 @@ class TwiglyController extends AbstractActionController
 
     }
 
-     public function wiperAction()
+     public function twiglyAction()
     {   
-        echo "wiperAction";
+        
 // return array('version'=> \Zend\Version\Version::VERSION);
 
         return new ViewModel(array(
