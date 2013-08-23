@@ -3,17 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-{#
 
     {% block title %}
-    {{ headTitle('Svenardo.com - Crystalis') }}
+    {{ headTitle('Crystalis') }}
     {% endblock %}
-#}
+
     {% block meta %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
-{#
+
     <link rel="apple-touch-icon-precomposed" href="http://www.svenardo.com/apple-touch-icon.png">
     <link rel="icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
@@ -45,7 +44,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-#}    
+  
     <!-- icons -->
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
@@ -76,8 +75,7 @@
     </div>
     </div>
 
-<!-- REQUIRED - all the javascripts       
 <script src="{{ basePath('/min/?g=js') }}"></script>
--->
+
 </body>
 </html>

@@ -3,30 +3,27 @@ namespace Twigly\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Zend\View\XmlRpc\Client;
-
-
+use Zend\XmlRpc\Client;
 
 class TwiglyController extends AbstractActionController
 {
     public function indexAction()
-    {	
-
-
-
-    }
-
-     public function twiglyAction()
     {   
+        /*
         echo "go...";
-// return array('version'=> \Zend\Version\Version::VERSION);
-
+        return array('data'=> \Zend\Version\Version::VERSION);
+        $view=new ViewModel();
+        //$view->set('title', 'Clubs');
+        return $view;
         return new ViewModel(array(
-            'data' => array("test"=>"test2"),
-            'data' => array("test"=>"test2"),
+            'data' => array("data"=>"test2"),
               
        ));
-
+        */
+       return new ViewModel(array(
+            'data' => array("data"=>"test2"),
+              
+       ));
     }
 
 }
