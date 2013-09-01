@@ -1,20 +1,16 @@
 <?php
-
 namespace Twigly\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Application\Model\Application;
-use Application\Form\ApplicationForm;
+use Zend\XmlRpc\Client;
 
-
-class TwiglyController extends AbstractActionController
+class IndexController extends AbstractActionController
 {
-
     public function indexAction()
     {   
-        echo "index...";
         /*
+        echo "go...";
         return array('data'=> \Zend\Version\Version::VERSION);
         $view=new ViewModel();
         //$view->set('title', 'Clubs');
@@ -23,14 +19,11 @@ class TwiglyController extends AbstractActionController
             'data' => array("data"=>"test2"),
               
        ));
-       */
-       $viewModel= new ViewModel(array(
+        */
+       return new ViewModel(array(
             'data' => array("data"=>"test2"),
               
        ));
-       $viewModel->setTerminal("true");
-       return $viewModel;
-       
     }
 
 }

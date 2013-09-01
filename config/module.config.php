@@ -2,7 +2,7 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Twigly\Controller\Twigly' => 'Twigly\Controller\TwiglyController',
+            'Twigly\Controller\TwiglyController' => 'Twigly\Controller\TwiglyController',
         ),
     ),
     
@@ -11,9 +11,9 @@ return array(
             'twigly' => array(
                 'type'    => 'literal',
                 'options' => array(
-                    'route'    => '.tplly',
+                    'route'    => '/twigly',
                     'defaults' => array(
-                        'controller' => 'Twigly\Controller\Twigly',
+                        'controller' => 'Twigly\Controller\TwiglyController',
                         'action'     => 'index',
                     ),
 
@@ -23,21 +23,21 @@ return array(
         ),
     ),
 
-    /*
-    'module_layouts' => array(
-        'Twigly' => 'layout.tplly.tpl',
-    ),
-    */
-
-
-    'view_manager' => array(
+'view_manager' => array(
+        'display_not_found_reason' => true,
+        'display_exceptions'       => true,
+        'doctype'                  => 'HTML5',
+        'not_found_template'       => 'error/404.tpl',
+        'exception_template'       => 'error/index.tpl',
         'template_map' => array(
-            'layout/layout'    	   => __DIR__ . '/../view/layout/layout.tpl',
-            'index/main'        => __DIR__ . '/../view.tplly/index/main.tpl',
-            'index/mobile'        => __DIR__ . '/../view.tplly/index/mobile.tpl',
-            ),
+            'twigly/twigly/index'           => __DIR__ . '/../view/layout/layout.tpl',
+            'twigly/layout'        => __DIR__ . '/../view/twigly/index/main.tpl',
+            'index/twigly'        => __DIR__ . '/../view/twigly/index/mobile.tpl',
+
+        ),
         'template_path_stack' => array(
-            'twigly' => __DIR__ . '/../view',
+            __DIR__ . '/../view',
         ),
     ),
+
 );
