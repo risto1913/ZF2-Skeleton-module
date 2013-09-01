@@ -9,9 +9,9 @@ return array(
     'router' => array(
         'routes' => array(
             'twigly' => array(
-                'type'    => 'literal',
+                'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/twigly',
+                    'route'    => '/twigly[/:page]',
                     'defaults' => array(
                         'controller' => 'Twigly\Controller\TwiglyController',
                         'action'     => 'index',
@@ -31,7 +31,7 @@ return array(
         'exception_template'       => 'error/index.tpl',
         'template_map' => array(
             'twigly/twigly/index'           => __DIR__ . '/../view/layout/layout.tpl',
-            'twigly/layout'        => __DIR__ . '/../view/twigly/index/main.tpl',
+            'twigly/main'        => __DIR__ . '/../view/twigly/index/main.tpl',
             'index/twigly'        => __DIR__ . '/../view/twigly/index/mobile.tpl',
 
         ),
